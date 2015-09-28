@@ -9,5 +9,5 @@ class domain extends Model
     protected $fillable = [
     	'fqdn',
     	'enabled',
-    ]
+    ];
 }

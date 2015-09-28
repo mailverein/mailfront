@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\domain;
+
 class DomainsController extends Controller
 {
     /**
@@ -15,10 +17,13 @@ class DomainsController extends Controller
      */
     public function index()
     {
-        $domain = 'example.com';
-        $masteruser = 'Peter';
+        //$domain = 'example.com';
+        //$masteruser = 'Peter';
+		$domains = Domain::all();
 
-        return view('domains', compact('domain', 'masteruser'));
+        //return view('domains', compact('domain', 'masteruser'));
+        //return $domains;
+		return view('domains.index', compact('domains'));
     }
 
     /**
@@ -50,7 +55,8 @@ class DomainsController extends Controller
      */
     public function show($id)
     {
-        //
+        $domain = domain::findOrFail($id);
+		return view('domains.show', compact('domain'));
     }
 
     /**
