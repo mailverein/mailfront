@@ -16,6 +16,11 @@ Route::get('domains/create', 'DomainsController@create');
 Route::get('domains/{id}', 'DomainsController@show');
 Route::post('domains', 'DomainsController@store');
 
+Route::get('aliases', 'AliasesController@index');
+Route::get('aliases/create', 'AliasesController@create');
+Route::get('aliases/{id}', 'AliasesController@show');
+Route::post('aliases', 'AliasesController@store');
+
 Route::get('/', function () {
     return view('welcome');
 });
