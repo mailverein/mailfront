@@ -12,3 +12,6 @@ Homestead.json
 Session.vim
 .netrwhist
 *~
+.project
+# e.g.: tags-exuberant -f php.tags --languages=PHP -R
+*.tags
