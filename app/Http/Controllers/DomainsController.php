@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\domain;
+use Request;
 
 class DomainsController extends Controller
 {
@@ -19,7 +20,8 @@ class DomainsController extends Controller
     {
         //$domain = 'example.com';
         //$masteruser = 'Peter';
-		$domains = Domain::all();
+		//$domains = Domain::all();
+		$domains = Domain::orderBy('fqdn','desc')->get();
 
         //return view('domains', compact('domain', 'masteruser'));
         //return $domains;
@@ -33,7 +35,7 @@ class DomainsController extends Controller
      */
     public function create()
     {
-        //
+        return view('domains.create');
     }
 
     /**
@@ -44,7 +46,10 @@ class DomainsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = Request::all();
+        //return $input;
+        Domain::create($input);
+        return redirect('domains');
     }
 
     /**

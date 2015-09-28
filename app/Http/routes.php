@@ -12,7 +12,9 @@
 */
 
 Route::get('domains', 'DomainsController@index');
-Route::get('domains/show/{id}', 'DomainsController@show');
+Route::get('domains/create', 'DomainsController@create');
+Route::get('domains/{id}', 'DomainsController@show');
+Route::post('domains', 'DomainsController@store');
 
 Route::get('/', function () {
     return view('welcome');
