@@ -6,7 +6,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use app\alias;
+use App\alias;
 use Request;
 
 class AliasesController extends Controller
@@ -41,7 +41,6 @@ class AliasesController extends Controller
     public function store(Request $request)
     {
         $input = Request::all();
-        //return $input;
         Alias::create($input);
         return redirect('aliases');
     }
