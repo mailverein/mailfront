@@ -3,7 +3,7 @@
 	<h1>Create new Alias</h1>
 	<hr/>
 	
-	{!! Form::open(['action' => 'AliasController@index']) !!}
+	{!! Form::open(['action' => 'AliasesController@index']) !!}
 		{!! Form::label('localpart', 'Localpart:') !!}
 		{!! Form::text('localpart') !!}
 		

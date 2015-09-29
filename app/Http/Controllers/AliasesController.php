@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+
+use app\alias;
+use Request;
 
 class AliasesController extends Controller
 {
@@ -39,7 +42,7 @@ class AliasesController extends Controller
     {
         $input = Request::all();
         //return $input;
-        Domain::create($input);
+        Alias::create($input);
         return redirect('aliases');
     }
 
