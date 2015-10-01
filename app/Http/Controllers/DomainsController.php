@@ -6,7 +6,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\domain;
+use App\Domain;
 use Request;
 
 class DomainsController extends Controller
@@ -60,7 +60,7 @@ class DomainsController extends Controller
      */
     public function show($id)
     {
-        $domain = domain::findOrFail($id);
+        $domain = Domain::findOrFail($id);
 		return view('domains.show', compact('domain'));
     }
 
