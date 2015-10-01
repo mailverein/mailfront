@@ -6,7 +6,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\alias;
+use App\Alias;
 use Request;
 
 class AliasesController extends Controller
@@ -53,7 +53,7 @@ class AliasesController extends Controller
      */
     public function show($id)
     {
-        $alias = alias::findOrFail($id);
+        $alias = Alias::findOrFail($id);
 		return view('aliases.show', compact('alias'));
     }
 
