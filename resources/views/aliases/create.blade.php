@@ -7,11 +7,11 @@
 		{!! Form::label('localpart', 'Localpart:') !!}
 		{!! Form::text('localpart') !!}
 		
-        # FIXME allow to choose domainid from list
+        # TODO allow to choose domainid from list
 		{!! Form::label('domainid', 'Domain ID:') !!}
 		{!! Form::text('domainid') !!}
 
-        # FIXME allow to choose mailboxid from list
+        # TODO allow to choose mailboxid from list
 		{!! Form::label('mailboxid', 'Destination Mailbox ID:') !!}
 		{!! Form::text('mailboxid') !!}
 
