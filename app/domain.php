@@ -20,4 +20,12 @@ class domain extends Model
     {
         return $query->where('enabled', 1);
     };
+
+    /**
+     * list all aliases for a domain
+     */
+    public function aliases()
+    {
+        return $this->hasMany('App\alias');
+    }
 }
