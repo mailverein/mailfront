@@ -12,4 +12,14 @@ class alias extends Model
 		'mailboxid',
 		'domainid',
 	];
+
+	/**
+	 * Scope a query to only include active aliases.
+	 *
+	 * @return \Illuminate\Database\Eloquent\Builder
+	 */
+	public function scopeActive($query)
+	{
+		return $query->where('enabled', 1);
+	}
 }
